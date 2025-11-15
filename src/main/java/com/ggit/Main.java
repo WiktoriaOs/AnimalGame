@@ -6,12 +6,22 @@ import java.util.Random;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
 
-    private static Random random = new Random();
+    //private static Random random = new Random();
     private static int mapSize=100;
+    private static final int nrDays=10;
 
     public static void main(String[] args) {
-        Animal animal=new Animal(new Vector2D(random.nextInt(mapSize), random.nextInt(mapSize)));
-        System.out.println("Animal created at position "+animal.getPosition());
+        int noOfDays= args.length>0? Integer.parseInt(args[0]): nrDays;
+        /*Animal animal=new Animal(new Vector2D(random.nextInt(mapSize), random.nextInt(mapSize)));
+        System.out.println("Animal created at position "+animal.getPosition());*/
+        Simulation simulation = new Simulation(mapSize, mapSize);
+        for (int i = 0; i < noOfDays; i++) {
+            System.out.println("Day "+i);
+            simulation.simulateDay();
+        }
+        /*for (String arg: args) {
+            System.out.println(arg);
+        }*/
     }
 }
 
