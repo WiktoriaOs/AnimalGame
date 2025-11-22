@@ -4,7 +4,7 @@ import java.util.*;
 
 public class AnimalsEnclosure extends  AbstractWorldMap{
     private List<Animal> animals = new LinkedList<>();
-    private List<Plant> plants= new LinkedList<>();
+    private Map<Vector2D, Plant> plants= new HashMap<>();
     private static final Random random=new Random();
 
     public AnimalsEnclosure(int width, int height, int noOfPlants, int noOfAnimals){
@@ -47,13 +47,14 @@ public class AnimalsEnclosure extends  AbstractWorldMap{
             }
         }
         if(toRemove!=null) plants.remove(toRemove);*/
-        Iterator<Plant> it = plants.iterator();
+        /*Iterator<Plant> it = plants.iterator();
         while (it.hasNext()){
             if(it.next().getPosition().equals(position)){
                 it.remove();
                 break;
             }
-        }
+        }*/
+        plants.remove(position);
     }
 
     private void createAnimals(int noOfAnimals){
@@ -69,12 +70,13 @@ public class AnimalsEnclosure extends  AbstractWorldMap{
         while(isPositionOccupied(newPosition)){
             newPosition= Vector2D.random(width, height);
         }
-        plants.add(new Plant(newPosition));
+        plants.put(newPosition, new Plant(newPosition));
     }
     private boolean isPositionOccupied(Vector2D position){
-        for (Plant plant: plants) {
+        /*for (Plant plant: plants) {
             if(plant.getPosition().equals(position)) return true;
         }
-        return false;
+        return false;*/
+        return plants.containsKey(position);
     }
 }
