@@ -4,6 +4,8 @@ public class Animal {
     private final int id;
     private Vector2D position;
     private static int counter= 0;
+    private int energy = Simulation.ANIMAL_ENERGY;
+    private int age = 0;
 
     public Animal(Vector2D position){
         this.position=position;
@@ -14,6 +16,18 @@ public class Animal {
         return id;
     }
 
+    public int getEnergy() {
+        return energy;
+    }
+    public void eat(){
+        energy += Simulation.PLANT_ENERGY;
+    }
+    public int getAge() {
+        return age;
+    }
+    public void ageOneDay(){
+        age++;
+    }
     public Vector2D getPosition(){
         return position;
     }
