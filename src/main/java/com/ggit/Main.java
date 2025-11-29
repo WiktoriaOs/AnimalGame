@@ -19,7 +19,7 @@ public class Main {
         Simulation simulation = new Simulation(mapSize, mapSize, noOfPlant, noOfAnimals);
         for (int i = 0; i < noOfDays; i++) {
             System.out.println("Day "+i);
-            simulation.simulateDay();
+            simulation.simulateDay(i);
         }
         /*for (String arg: args) {
             System.out.println(arg);

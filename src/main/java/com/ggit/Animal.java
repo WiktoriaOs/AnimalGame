@@ -1,6 +1,6 @@
 package com.ggit;
 
-public class Animal {
+public class Animal implements Comparable<Animal>{
     private final int id;
     private Vector2D position;
     private static int counter= 0;
@@ -25,9 +25,17 @@ public class Animal {
     public int getAge() {
         return age;
     }
-    public void ageOneDay(){
+    public Animal ageOneDay(){
         age++;
+        energy -= Simulation.DAY_ENERGY;
+        return this;
     }
+
+    @Override
+    public int compareTo(Animal animal) {
+        return energy==animal.energy ? id- animal.id : energy - animal.energy;
+    }
+
     public Vector2D getPosition(){
         return position;
     }
