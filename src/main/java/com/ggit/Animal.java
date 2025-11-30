@@ -1,15 +1,25 @@
 package com.ggit;
 
 public class Animal implements Comparable<Animal>{
-    private final int id;
+    private final int id = counter ++;
     private Vector2D position;
     private static int counter= 0;
     private int energy = Simulation.ANIMAL_ENERGY;
     private int age = 0;
+    private final Genome genome;
 
     public Animal(Vector2D position){
         this.position=position;
-        this.id= counter++;
+        genome = new Genome();
+    }
+    public Animal(Animal mother, Animal father){
+        energy = (mother.energy + father.energy)/4;
+        genome = new Genome(mother.genome, father.genome);
+        position= mother.position.add(MapDirection.random().getUnitVector());
+    }
+
+    public Genome getGenome() {
+        return genome;
     }
 
     public int getId() {
@@ -43,6 +53,12 @@ public class Animal implements Comparable<Animal>{
     public void move(MapDirection direction, WorldMap map){
         position= pbc(position.add(direction.getUnitVector()), map);
         System.out.println("Animal moveed to "+position);
+    }
+
+    public Animal reproduce(Animal father){
+        energy = energy*3/4;
+        father.energy = father.energy*3/4;
+        return new Animal(this, father);
     }
 
     private Vector2D pbc(Vector2D newPosition, WorldMap map){
