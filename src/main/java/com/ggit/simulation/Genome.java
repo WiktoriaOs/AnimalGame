@@ -1,4 +1,4 @@
-package com.ggit;
+package com.ggit.simulation;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,22 +12,21 @@ public class Genome {
     private static final int MAX_SPLIT = 30;
     private static final Random random = new Random();
 
-    private List<MapDirection> genes;
+    private final List<MapDirection> genes;
 
-    public Genome(){
-        /*genes= new ArrayList<>();
-        for (int i = 0; i < 32; i++) {
-
-        }*/
-        genes = Stream.generate(MapDirection ::random).
-                limit(GENOME_LENGTH).collect(Collectors.toCollection(ArrayList ::new));
-
+    public Genome() {
+        genes = Stream.generate(MapDirection::random).limit(GENOME_LENGTH)
+                .collect(Collectors.toCollection(ArrayList::new));
     }
 
-    public Genome(Genome mother, Genome father){
+    public Genome(Genome mather, Genome father) {
         int split = random.nextInt(MIN_SPLIT, MAX_SPLIT);
-        genes= new ArrayList<>(GENOME_LENGTH);
-        genes.addAll(mother.genes.subList(0, split));
+        genes = new ArrayList<>(GENOME_LENGTH);
+        genes.addAll(mather.genes.subList(0, split));
         genes.addAll(split, father.genes.subList(split, GENOME_LENGTH));
+    }
+
+    public MapDirection randomGene() {
+        return genes.get(random.nextInt(GENOME_LENGTH));
     }
 }

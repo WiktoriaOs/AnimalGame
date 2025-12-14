@@ -1,0 +1,31 @@
+{"dayNumber":0,"meanAge":1.0,"meanNumberOfChildren":0.0,"meanEnergy":10.0,"animalsCount":75}{"dayNumber":1,"meanAge":2.0,"meanNumberOfChildren":0.0,"meanEnergy":17.8,"animalsCount":75}{"dayNumber":2,"meanAge":2.8378378378378377,"meanNumberOfChildren":0.16216216216216217,"meanEnergy":24.60810810810811,"animalsCount":74}{"dayNumber":3,"meanAge":3.5875,"meanNumberOfChildren":0.375,"meanEnergy":28.1125,"animalsCount":80}{"dayNumber":4,"meanAge":4.27906976744186,"meanNumberOfChildren":0.5232558139534884,"meanEnergy":31.988372093023255,"animalsCount":86}{"dayNumber":5,"meanAge":4.9021739130434785,"meanNumberOfChildren":0.6739130434782609,"meanEnergy":35.21739130434783,"animalsCount":92}{"dayNumber":6,"meanAge":5.240384615384615,"meanNumberOfChildren":0.8653846153846154,"meanEnergy":35.05769230769231,"animalsCount":104}{"dayNumber":7,"meanAge":5.719298245614035,"meanNumberOfChildren":1.0350877192982457,"meanEnergy":35.333333333333336,"animalsCount":114}{"dayNumber":8,"meanAge":6.169354838709677,"meanNumberOfChildren":1.185483870967742,"meanEnergy":36.50806451612903,"animalsCount":124}{"dayNumber":9,"meanAge":6.533333333333333,"meanNumberOfChildren":1.3111111111111111,"meanEnergy":37.45925925925926,"animalsCount":135}{"dayNumber":10,"meanAge":6.49685534591195,"meanNumberOfChildren":1.4465408805031446,"meanEnergy":33.918238993710695,"animalsCount":159}{"dayNumber":11,"meanAge":6.546448087431694,"meanNumberOfChildren":1.5573770491803278,"meanEnergy":31.07650273224044,"animalsCount":183}{"dayNumber":12,"meanAge":6.748743718592965,"meanNumberOfChildren":1.6381909547738693,"meanEnergy":30.472361809045225,"animalsCount":199}{"dayNumber":13,"meanAge":6.780269058295964,"meanNumberOfChildren":1.7174887892376682,"meanEnergy":28.309417040358746,"animalsCount":223}{"dayNumber":14,"meanAge":6.805785123966942,"meanNumberOfChildren":1.7851239669421488,"meanEnergy":27.06198347107438,"animalsCount":242}{"dayNumber":15,"meanAge":6.9581749049429655,"meanNumberOfChildren":1.9163498098859315,"meanEnergy":25.319391634980988,"animalsCount":263}{"dayNumber":16,"meanAge":7.057142857142857,"meanNumberOfChildren":2.025,"meanEnergy":24.010714285714286,"animalsCount":280}{"dayNumber":17,"meanAge":7.277777777777778,"meanNumberOfChildren":2.09375,"meanEnergy":24.086805555555557,"animalsCount":288}{
+  "dayNumber": 0,
+  "meanAge": 1.00,
+  "meanNumberOfChildren": 0.00,
+  "meanEnergy": 10.00,
+  "animalsCount": 72
+}{
+  "dayNumber": 1,
+  "meanAge": 2.00,
+  "meanNumberOfChildren": 0.00,
+  "meanEnergy": 17.92,
+  "animalsCount": 72
+}{
+  "dayNumber": 2,
+  "meanAge": 2.75,
+  "meanNumberOfChildren": 0.25,
+  "meanEnergy": 21.84,
+  "animalsCount": 79
+}{
+  "dayNumber": 3,
+  "meanAge": 3.54,
+  "meanNumberOfChildren": 0.45,
+  "meanEnergy": 25.35,
+  "animalsCount": 84
+}{
+  "dayNumber": 4,
+  "meanAge": 4.18,
+  "meanNumberOfChildren": 0.59,
+  "meanEnergy": 28.59,
+  "animalsCount": 91
+}
